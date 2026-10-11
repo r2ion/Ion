@@ -79,6 +79,7 @@ jobs:
 
           unzip NorthstarStubs.zip -d ion/bin/x64_dedi
           unzip ion-launcher.zip -d ion
+          mv --verbose ion/Northstar.dll ion/R2Northstar/Northstar.dll
           rsync -avr --exclude="Northstar.Coop" --exclude=".git*" --exclude="*.md" northstar-mods/. ion/R2Northstar/mods
       - name: Checkout Navmesh repository
         uses: actions/checkout@v4
